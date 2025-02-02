@@ -1,0 +1,124 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: #ddd;
+}
+
+.container {
+    background: rgba(40, 40, 40, 0.95);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+p {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #f1f1f1;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    font-size: 17px;
+    outline: none;
+    text-align: center;
+    background: #222;
+    color: #fff;
+    transition: box-shadow 0.3s;
+}
+
+input:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* QR Code Image Box */
+.imgBox {
+    margin-top: 15px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: #333;
+    border-radius: 8px;
+}
+
+.imgBox.show-img {
+    display: flex;
+}
+
+.imgBox img {
+    width: 150px;
+    height: 150px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    transform: translateY(-2px);
+}
+
+/* Shake animation for error */
+.error {
+    animation: shake 0.3s ease-in-out 2;
+    border: 1px solid red;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 18px;
+    }
+    p {
+        font-size: 18px;
+    }
+    input, button {
+        font-size: 15px;
+        padding: 10px;
+    }
+}
